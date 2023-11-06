@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Discover Grook, the advanced ChatGPT-like AI with real-time access to social media data, offering unique sarcasm and humor in its interactions. Explore the future of generative AI technology with Grook's cutting-edge capabilities." />
+    <meta name="keywords"
+        content="Grok, AI, ChatGPT, real-time information, social media integration, sarcasm, humor in AI, generative AI, tech investment, AI market, artificial intelligence, Elon Musk, X AI" />
+    <link rel="preload" href="./assets/fonts/e3b8d441242e07fb-s.p.woff2" as="font" type="font/woff2" />
+    <link rel="preload" href="./assets/fonts/eea71804552b3264-s.p.woff2" as="font" type="font/woff2" />
+    <link rel="preload" href="./assets/fonts/21ed5661b47f7f6d-s.woff2" as="font" type="font/woff2" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" sizes="any" />
+    <title>Grook: The AI with Real-Time Social Media Integration</title>
+
+    <style>
+        @font-face {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(./assets/fonts/e3b8d441242e07fb-s.p.woff2) format('woff2');
+            unicode-range: U+0100-02af, U+0304, U+0308, U+0329, U+1e00-1e9f,
+                U+1ef2-1eff, U+2020, U+20a0-20ab, U+20ad-20cf, U+2113,
+                U+2c60-2c7f, U+a720-a7ff;
+        }
+
+        @font-face {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(./assets/fonts/21ed5661b47f7f6d-s.woff2) format('woff2');
+            unicode-range: U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6,
+                U+02da, U+02dc, U+0304, U+0308, U+0329, U+2000-206f, U+2074,
+                U+20ac, U+2122, U+2191, U+2193, U+2212, U+2215, U+feff,
+                U+fffd;
+        }
+
+        @font-face {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(./assets/fonts/e3b8d441242e07fb-s.p.woff2) format('woff2');
+            unicode-range: U+0100-02af, U+0304, U+0308, U+0329, U+1e00-1e9f,
+                U+1ef2-1eff, U+2020, U+20a0-20ab, U+20ad-20cf, U+2113,
+                U+2c60-2c7f, U+a720-a7ff;
+        }
+
+        @font-face {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(./assets/fonts/21ed5661b47f7f6d-s.woff2) format('woff2');
+            unicode-range: U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6,
+                U+02da, U+02dc, U+0304, U+0308, U+0329, U+2000-206f, U+2074,
+                U+20ac, U+2122, U+2191, U+2193, U+2212, U+2215, U+feff,
+                U+fffd;
+        }
+
+        @font-face {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(./assets/fonts/e3b8d441242e07fb-s.p.woff2) format('woff2');
+            unicode-range: U+0100-02af, U+0304, U+0308, U+0329, U+1e00-1e9f,
+                U+1ef2-1eff, U+2020, U+20a0-20ab, U+20ad-20cf, U+2113,
+                U+2c60-2c7f, U+a720-a7ff;
+        }
+
+        @font-face {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(./assets/fonts/21ed5661b47f7f6d-s.woff2) format('woff2');
+            unicode-range: U+00??, U+0131, U+0152-0153, U+02bb-02bc, U+02c6,
+                U+02da, U+02dc, U+0304, U+0308, U+0329, U+2000-206f, U+2074,
+                U+20ac, U+2122, U+2191, U+2193, U+2212, U+2215, U+feff,
+                U+fffd;
+        }
+
+        @font-face {
+            font-family: Nunito_Fallback;
+            src: local('Arial');
+            ascent-override: 99.39%;
+            descent-override: 34.7%;
+            line-gap-override: 0%;
+            size-adjust: 101.72%;
+        }
+    </style>
+
+    <style>
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+        }
+
+        blockquote,
+        body,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            -webkit-margin-after: 0;
+            margin-block-end: 0;
+        }
+
+        ol[role='list'],
+        ul[role='list'] {
+            list-style: none;
+        }
+
+        html:focus-within {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            text-rendering: optimizeSpeed;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        a:not([class]) {
+            -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto;
+        }
+
+        img,
+        picture {
+            max-width: 100%;
+            display: block;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html:focus-within {
+                scroll-behavior: auto;
+            }
+
+            *,
+            :after,
+            :before {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        .headerButton {
+            padding: 0;
+            background: none;
+            color: #d5dbe0;
+            margin: 0;
+            flex: 0 0 60px;
+            height: 59px;
+            width: 60px;
+            border: none;
+            border-right: 1px solid #262626;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .headerButton.small {
+            flex: 0 0 50px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .headerButton.wide {
+            width: auto;
+            padding: 0 25px;
+            white-space: nowrap;
+        }
+
+        .headerButton.wide svg {
+            margin-right: 12px;
+        }
+
+        .headerButton:disabled {
+            color: #637686;
+            cursor: not-allowed;
+        }
+
+        .headerButton:disabled:hover {
+            background: transparent;
+        }
+
+        .headerButton:hover {
+            background: #1a1a1a;
+        }
+
+        .headerButton:active {
+            background: #0d0d0d;
+        }
+
+        .grokLogo {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: Nunito, Nunito_Fallback;
+            font-style: normal;
+            background: #000;
+            color: #d5dbe0;
+            line-height: 1.75;
+            display: flex;
+            flex-direction: column;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Saira Condensed, sans-serif;
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        code,
+        pre {
+            font-size: 1rem;
+            line-height: 1.1;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            margin: 0 0 1.38rem;
+            font-family: Saira Condensed, sans-serif;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 3.052rem;
+        }
+
+        h2 {
+            font-size: 2.441rem;
+        }
+
+        h3 {
+            font-size: 1.953rem;
+        }
+
+        h4 {
+            font-size: 1.563rem;
+        }
+
+        h5 {
+            font-size: 1.25rem;
+        }
+
+        .text_small,
+        small {
+            font-size: 0.8rem;
+        }
+
+        a {
+            color: #2196f3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #14598f;
+        }
+
+        @media (hover: hover) {
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #0f1518;
+                border-left: 1px solid #262626;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background: #d5dbe0;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #2196f3;
+            }
+
+            ::-webkit-scrollbar-thumb:active {
+                background: #14598f;
+            }
+
+            ::-webkit-scrollbar:window-inactive {
+                visibility: hidden;
+            }
+        }
+    </style>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .layout {
+            position: relative;
+            z-index: 2;
+            flex: 1 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .container .slogan {
+            position: relative;
+            flex: 1 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 25px 110px;
+        }
+
+        .container .slogan .logo {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            display: flex;
+            z-index: 1;
+            color: #fff;
+            font-size: 30px;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .container .content {
+            position: relative;
+            z-index: 1;
+            background: #000;
+            flex: 1 1;
+            padding: 50px 25px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .container .slogan {
+                padding: 132px 25px 25px;
+                min-height: 100vh;
+                display: none;
+            }
+
+            .container .content {
+                min-height: 100vh;
+            }
+
+            .container .animated {
+                font-size: 2rem;
+            }
+        }
+
+        .stars_stars {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1 !important;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .stars_stars.stars_paused__6GtKJ .stars_animation {
+            animation-play-state: paused !important;
+        }
+
+        .stars_stars .stars_animation {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: calc(100vh + 500px);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .stars_stars .stars_animation.stars_starsSmall {
+            animation: stars_animStar 50s linear infinite;
+            z-index: 0;
+            opacity: 0.05;
+            background: url(./assets/bg_square_small.webp);
+        }
+
+        .stars_stars .stars_animation.stars_starsLarge {
+            animation: stars_animStar 25s linear infinite;
+            z-index: 1;
+            opacity: 0.2;
+            background: url(./assets/bg_square_large.webp);
+        }
+
+        @keyframes stars_animStar {
+            0% {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-500px);
+            }
+        }
+
+        .stars_gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg,
+                    #000,
+                    rgba(125, 144, 159, 0.15));
+            z-index: 2;
+        }
+
+        .animated {
+            font-size: 3.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            line-height: 1.1;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .animated span {
+            padding: 2px;
+            animation: tokens 1s ease-out forwards;
+            opacity: 0;
+            position: relative;
+            display: block;
+            color: #fff;
+        }
+
+        @keyframes tokens {
+            0% {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animated span+span {
+            margin-left: 9px;
+        }
+
+        .animated span:after {
+            display: block;
+            content: ' ';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 5px;
+            background-color: #fff;
+            animation: tokenBg 0.5s ease-out forwards;
+        }
+
+        @keyframes tokenBg {
+            0% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .animated span:first-child,
+        .animated span:first-child:after {
+            animation-delay: 0.4s;
+        }
+
+        .animated span:nth-child(2),
+        .animated span:nth-child(2):after {
+            animation-delay: 0.55s;
+        }
+
+        .animated span:nth-child(3),
+        .animated span:nth-child(3):after {
+            animation-delay: 0.7s;
+        }
+
+        .animated span:nth-child(4),
+        .animated span:nth-child(4):after {
+            animation-delay: 0.85s;
+        }
+
+        .animated span:nth-child(5),
+        .animated span:nth-child(5):after {
+            animation-delay: 1s;
+        }
+
+        .animated span:nth-child(6),
+        .animated span:nth-child(6):after {
+            animation-delay: 1.15s;
+        }
+
+        .animated span:nth-child(7),
+        .animated span:nth-child(7):after {
+            animation-delay: 1.3s;
+        }
+
+        .animated span:nth-child(8),
+        .animated span:nth-child(8):after {
+            animation-delay: 1.45s;
+        }
+
+        .animated span:nth-child(9),
+        .animated span:nth-child(9):after {
+            animation-delay: 1.6s;
+        }
+
+        .animated span:nth-child(10),
+        .animated span:nth-child(10):after {
+            animation-delay: 1.75s;
+        }
+
+        .animated span:nth-child(11),
+        .animated span:nth-child(11):after {
+            animation-delay: 1.9s;
+        }
+
+        .animated span:nth-child(12),
+        .animated span:nth-child(12):after {
+            animation-delay: 2.05s;
+        }
+
+        .animated span:nth-child(13),
+        .animated span:nth-child(13):after {
+            animation-delay: 2.2s;
+        }
+
+        .animated span:nth-child(14),
+        .animated span:nth-child(14):after {
+            animation-delay: 2.35s;
+        }
+
+        .animated span:nth-child(15),
+        .animated span:nth-child(15):after {
+            animation-delay: 2.5s;
+        }
+
+        .animated span:nth-child(16),
+        .animated span:nth-child(16):after {
+            animation-delay: 2.65s;
+        }
+
+        .animated span:nth-child(17),
+        .animated span:nth-child(17):after {
+            animation-delay: 2.8s;
+        }
+
+        .animated span:nth-child(18),
+        .animated span:nth-child(18):after {
+            animation-delay: 2.95s;
+        }
+
+        .animated span:nth-child(19),
+        .animated span:nth-child(19):after {
+            animation-delay: 3.1s;
+        }
+
+        .animated span:nth-child(20),
+        .animated span:nth-child(20):after {
+            animation-delay: 3.25s;
+        }
+
+        .animated span:nth-child(21),
+        .animated span:nth-child(21):after {
+            animation-delay: 3.4s;
+        }
+
+        .animated span:nth-child(22),
+        .animated span:nth-child(22):after {
+            animation-delay: 3.55s;
+        }
+
+        .animated span:nth-child(23),
+        .animated span:nth-child(23):after {
+            animation-delay: 3.7s;
+        }
+
+        .animated span:nth-child(24),
+        .animated span:nth-child(24):after {
+            animation-delay: 3.85s;
+        }
+
+        .animated span:nth-child(25),
+        .animated span:nth-child(25):after {
+            animation-delay: 4s;
+        }
+
+        .animated span:nth-child(26),
+        .animated span:nth-child(26):after {
+            animation-delay: 4.15s;
+        }
+
+        .animated span:nth-child(27),
+        .animated span:nth-child(27):after {
+            animation-delay: 4.3s;
+        }
+
+        .animated span:nth-child(28),
+        .animated span:nth-child(28):after {
+            animation-delay: 4.45s;
+        }
+
+        .animated span:nth-child(29),
+        .animated span:nth-child(29):after {
+            animation-delay: 4.6s;
+        }
+
+        .animated span:nth-child(30),
+        .animated span:nth-child(30):after {
+            animation-delay: 4.75s;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: .875rem;
+            line-height: 1;
+            z-index: 1;
+            padding: 50px 25px 25px;
+        }
+
+        footer .auth_notices {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer .auth_notices a {
+            color: rgb(113, 118, 123);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="layout">
+        <div class="container">
+            <div class="slogan">
+                <div class="stars_stars">
+                    <div class="stars_animation stars_starsSmall"></div>
+                    <div class="stars_animation stars_starsLarge"></div>
+                    <div class="stars_gradient"></div>
+                </div>
+                <div class="logo">
+                    <img alt="Grook Logo" loading="lazy" width="43" height="43" decoding="async" data-nimg="1"
+                        src="./assets/logo.svg" style="color: transparent" />
+                    Grook
+                </div>
+                <div class="animated">
+                    <span>Conversational</span>
+                    <span>AI</span>
+                    <span>for</span>
+                    <span>understanding</span>
+                    <span>the</span>
+                    <span>universe</span>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="auth_notices">
+                <a href="https://AI-Writer.app" target="_blank">AI Writer</a>
+                <a href="https://WorkGPT.us" target="_blank">WorkGPT</a>
+                <a href="https://AITwin.us" target="_blank">AI Twin</a>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HMLBJBBJG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || []
+        function gtag() {
+            dataLayer.push(arguments)
+        }
+        gtag('js', new Date())
+
+        gtag('config', 'G-2HMLBJBBJG')
+    </script>
+</body>
+
+</html>
